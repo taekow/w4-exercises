@@ -15,28 +15,9 @@
   	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<div class="container">
-	<h1>All Books</h1>
-	<table class="table table-striped table-bordered">
-	    <thead>
-	        <tr>
-	            <th>ID</th>
-	            <th>Title</th>
-	            <th>Language</th>
-	            <th># Pages</th>
-	        </tr>
-	    </thead>
-	   <tbody>
-			<c:forEach var="book" items="${books}">
-				<tr>
-					<td><c:out value="${book.id}"></c:out></td>
-					<td><a href="/books/${book.id}"><c:out value="${book.title}"></c:out></a></td>
-					<td><c:out value="${book.language}"></c:out></td>
-					<td><c:out value="${book.numberOfPages}"></c:out></td>
-				</tr>	
-			</c:forEach>
-	    </tbody>
-	</table>
-	</div>
+	<h1>Title: <c:out value="${book.title}"></c:out></h1>
+	<h3>Description: <c:out value="${book.description}"></c:out></h3>
+	<h3>Language: <c:out value="${book.language}"></c:out></h3>
+	<h3>Number of pages: <c:out value="${book.numberOfPages}"></c:out></h3>
 </body>
 </html>
