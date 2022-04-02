@@ -51,7 +51,7 @@ public class BooksApi {
     	// set id
     	book.setId(id);
     	
-    	// 
+    	// Store updated book info
     	Book updateBook = bookService.updateBook(book);
         return updateBook;
     }
